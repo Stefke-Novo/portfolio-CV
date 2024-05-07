@@ -10,8 +10,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Node $
         uses: actions/setup-node@v4
-        with:
-          node-version: $
       - name: build and deploy
         run: |
           ng build --base-href "https://Stefke-Novo.github.io/portfolio-CV/"
