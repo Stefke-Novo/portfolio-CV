@@ -6,6 +6,8 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest
     steps:
+      - name: Install Dependencies
+        run: npm install
       - name: Checkout
         uses: actions/checkout@v4
       - name: Node $
