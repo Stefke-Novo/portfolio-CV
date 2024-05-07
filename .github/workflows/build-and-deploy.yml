@@ -12,5 +12,5 @@ jobs:
         uses: actions/setup-node@v4
       - name: build and deploy
         run: |
-          ng build --base-href "https://Stefke-Novo.github.io/portfolio-CV/"
+          npm run build --base-href "https://Stefke-Novo.github.io/portfolio-CV/"
           npx angular-cli-ghpages --dir=dist/portfolio-website
