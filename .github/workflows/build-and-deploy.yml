@@ -1,0 +1,18 @@
+name: build-and-deploy
+run-name: build-and-deploy-process
+on:
+  push
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node $
+        uses: actions/setup-node@v4
+        with:
+          node-version: $
+      - name: build and deploy
+        run: |
+          ng build --base-href "https://Stefke-Novo.github.io/portfolio-CV/"
+          npx angular-cli-ghpages --dir=dist/portfolio-website
