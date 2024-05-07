@@ -17,7 +17,7 @@ jobs:
 
       - name: build
         run: |
-          ng build --base-href "https://Stefke-Novo.github.io/portfolio-CV/"
+          npm run build
 
       - name: deploy
         run: |
