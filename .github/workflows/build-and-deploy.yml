@@ -17,8 +17,8 @@ jobs:
 
       - name: build
         run: |
-          npm run build --base-href "https://Stefke-Novo.github.io/portfolio-CV/"
-          
+          ng build --base-href "https://Stefke-Novo.github.io/portfolio-CV/"
+
       - name: deploy
         run: |
           npx angular-cli-ghpages --dir=dist/your-angular-app
