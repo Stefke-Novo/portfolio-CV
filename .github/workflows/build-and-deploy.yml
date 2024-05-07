@@ -1,28 +1,28 @@
-name: build-and-deploy
-run-name: build-and-deploy-process
-on:
-  push
-jobs:
-  build-and-deploy:
-    runs-on: windows-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+# name: build-and-deploy
+# run-name: build-and-deploy-process
+# on:
+#   push
+# jobs:
+#   build-and-deploy:
+#     runs-on: windows-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
 
-      - name: Node $
-        uses: actions/setup-node@v4
+#       - name: Node $
+#         uses: actions/setup-node@v4
 
-      - name: Install Dependencies
-        run: npm install
+#       - name: Install Dependencies
+#         run: npm install
 
-      - name: build
-        run: |
-          npm run build
+#       - name: build
+#         run: |
+#           npm run build
 
-      - name: deploy
-        run: |
-          npx angular-cli-ghpages --dir=dist/your-angular-app
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#       - name: deploy
+#         run: |
+#           npx angular-cli-ghpages --dir=dist/your-angular-app
+#         env:
+#           CI: true
+#           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
